@@ -27,6 +27,6 @@ float fit(float in0,float from0,float to0,float fromFix0,float toFix0){
 
 int main(){
 	
-	printf("%f",fit(50,0,100, 0,1000));
+	printf("%.1f",fit(50,0,100, 0,1000));
 	
 }
