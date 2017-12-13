@@ -1,21 +1,21 @@
 #include<stdio.h>
 
-float fit(float in0,float from0,float to0,float fromFix0,float toFix0){
-	float a1=from0;
-	float a2=to0;
-	float b1=1;
-	float b2=1;
-	float c1=fromFix0;
-	float c2=toFix0;
-	float den=(a2*b1-a1*b2);
-	float res=0;
+double fit(double in0,double from0,double to0,double fromFix0,double toFix0){
+	double a1=from0;
+	double a2=to0;
+	double b1=1;
+	double b2=1;
+	double c1=fromFix0;
+	double c2=toFix0;
+	double den=(a2*b1-a1*b2);
+	double res=0;
 
 	if(den!=0){
 		//a1x+b1y=c1
 		//a2x+b2y=c2
 		//regla de Cramer
-		float x=(b1*c2-b2*c1)/den;
-		float y=(a2*c1-a1*c2)/den;
+		double x=(b1*c2-b2*c1)/den;
+		double y=(a2*c1-a1*c2)/den;
 		res=in0*x+y;
 	
 	}else{
@@ -27,6 +27,6 @@ float fit(float in0,float from0,float to0,float fromFix0,float toFix0){
 
 int main(){
 	
-	printf("%.1f",fit(50,0,100, 0,1000));
+	printf("%.1lf",fit(50,0,100, 0,1000));
 	
 }
